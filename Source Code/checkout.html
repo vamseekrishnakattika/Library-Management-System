@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="css.css" type="text/css" rel="stylesheet"/>
+<meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
+<title>Check Out</title>
+<script type="text/javascript">
+function showDetails() {
+
+	var val=document.getElementById('search').value;
+	
+	if(val== "")
+	{
+		 document.getElementById("division").innerHTML = "<b>Please enter ISBN or title or author name of the book</b>";
+		 return false ;
+	}
+	
+	   
+}
+</script>
+<style type="text/css">
+#division{
+	text-align: left;
+	color: red;
+}
+</style>
+</head>
+<body>
+<header>
+	<h1>Library Management System</h1>
+	<a href="librarymanagement.html">Home</a>
+</header>
+<div class="header">Check out a book</div>
+<div id="menu">
+		<form action="checkout.php" onsubmit=" return showDetails()" method="post">
+		Search for books:<input type="search" placeholder="Please enter ISBN or title or author name" id="search" name="search">
+		<input type="submit" value="Search">	
+		</form>
+	<div id="division">
+	</div>
+</div>
+<div class="footer">
+	<h5>Copyright &copy; Vamseekrishna Kattika @ October 2017</h5>
+</div>
+</body>
+</html>

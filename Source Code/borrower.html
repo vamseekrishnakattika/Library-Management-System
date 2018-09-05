@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="css.css" type="text/css" rel="stylesheet"/>
+<meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
+<title>Borrower Management</title>
+<script type="text/javascript">
+function validateForm() {
+    var fname = document.getElementById('fname').value;
+	var lname = document.getElementById('lname').value;
+	var email = document.getElementById('email').value;
+	var address = document.getElementById('address').value;
+	var city = document.getElementById('city').value;
+	var state = document.getElementById('state').value;
+	var phone = document.getElementById('phone').value;
+    if (fname == " "||lname == ""||email == ""||address == ""||city == ""||state == ""||phone == "") {
+        document.getElementById("division").innerHTML = "<b>All fileds or mandatory</b>";
+        return false;
+    }
+}
+</script>
+<style type="text/css">
+#division{
+	text-align: left;
+	color: red;
+}
+
+table {
+    width: 30%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+</style>
+</head>
+<body>
+<header>
+	<h1>Library Management System</h1>
+	<a href="librarymanagement.html">Home</a>
+</header>
+<div class="header">Borrower Management</div>
+<div id="menu">
+	<form action="borrower.php" onsubmit="return validateForm()" method="post"  >
+		<table>
+			<tr>
+				<td><label for="firstname">First Name:</label></td>
+				<td><input type="text" name="fname" id="fname" placeholder="First Name"></td>
+			</tr>
+			<tr>
+				<td><label for="lastname">Last Name:</label></td>
+				<td><input type="text" name="lname" id="lname" placeholder="Last Name"></td>
+			</tr>
+			<tr>
+				<td><label for="email">Email:</label></td>
+				<td><input type="text" name="email" id="email" placeholder="Email"></td>
+			</tr>
+			<tr>
+				<td><label for="address">Address:</label></td>
+				<td><input type="text" name="address" id="address" placeholder="Street Address"></td>
+			</tr>
+			<tr>
+				<td><label for="city">City:</label></td>
+				<td><input type="text" name="city" id="city" placeholder="City"></td>
+			</tr>
+			<tr>
+				<td><label for="state">State:</label></td>
+				<td><input type="text" name="state" id="state" placeholder="State"></td>
+			</tr>
+			<tr>
+				<td><label for="phone">Phone:</label></td>
+				<td><input type="text" name="phone" id="phone" placeholder="Phone"></td>
+			</tr>				
+		</table>
+		<br/>
+		<input type="submit" value="Sign Up"/>
+		<input type="reset" value="Reset"/>
+	</form>
+	<div id="division">
+	</div>
+</div>
+<div class="footer">
+	<h5>Copyright &copy; Vamseekrishna Kattika @ October 2017</h5>
+</div>	
+</body>
+</html>
